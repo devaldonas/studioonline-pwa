@@ -117,19 +117,19 @@ export default function Home() {
           
          {/* STUDIO com sobreposição, letras brancas e leve gradiente cinza - MAIS SEPARADAS */}
 <div className="flex justify-start text-6xl md:text-8xl font-bold tracking-tight mb-0">
-  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-200 to-gray-400 bg-clip-text text-transparent drop-shadow-lg">
+  <span className="relative -mr-3 bg-gradient-to-b from-white via-gray-200 to-gray-400 bg-clip-text text-transparent drop-shadow-lg">
     S
   </span>
-  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-300 to-gray-500 bg-clip-text text-transparent drop-shadow-lg">
+  <span className="relative -mr-3 bg-gradient-to-b from-white via-gray-300 to-gray-500 bg-clip-text text-transparent drop-shadow-lg">
     T
   </span>
-  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-400 to-gray-600 bg-clip-text text-transparent drop-shadow-lg">
+  <span className="relative -mr-3 bg-gradient-to-b from-white via-gray-400 to-gray-600 bg-clip-text text-transparent drop-shadow-lg">
     U
   </span>
-  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-500 to-gray-700 bg-clip-text text-transparent drop-shadow-lg">
+  <span className="relative -mr-3 bg-gradient-to-b from-white via-gray-500 to-gray-700 bg-clip-text text-transparent drop-shadow-lg">
     D
   </span>
-  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-600 to-gray-800 bg-clip-text text-transparent drop-shadow-lg">
+  <span className="relative -mr-3 bg-gradient-to-b from-white via-gray-600 to-gray-800 bg-clip-text text-transparent drop-shadow-lg">
     I
   </span>
   <span className="relative bg-gradient-to-b from-white via-gray-700 to-gray-900 bg-clip-text text-transparent drop-shadow-lg">
