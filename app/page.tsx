@@ -112,20 +112,40 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/50" />
 
         <div className="relative z-10 text-white max-w-4xl mx-auto">
+          
           {/* STUDIO letra por letra */}
-          <div className="flex justify-center gap-3 text-5xl md:text-6xl font-bold tracking-wider mb-6">
-            <span>S</span>
-            <span>T</span>
-            <span>U</span>
-            <span>D</span>
-            <span>I</span>
-            <span>O</span>
-          </div>
+          
+         {/* STUDIO com sobreposição, letras brancas e leve gradiente cinza - MAIS SEPARADAS */}
+<div className="flex justify-start text-6xl md:text-8xl font-bold tracking-tight mb-0">
+  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-200 to-gray-400 bg-clip-text text-transparent drop-shadow-lg">
+    S
+  </span>
+  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-300 to-gray-500 bg-clip-text text-transparent drop-shadow-lg">
+    T
+  </span>
+  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-400 to-gray-600 bg-clip-text text-transparent drop-shadow-lg">
+    U
+  </span>
+  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-500 to-gray-700 bg-clip-text text-transparent drop-shadow-lg">
+    D
+  </span>
+  <span className="relative -mr-4 bg-gradient-to-b from-white via-gray-600 to-gray-800 bg-clip-text text-transparent drop-shadow-lg">
+    I
+  </span>
+  <span className="relative bg-gradient-to-b from-white via-gray-700 to-gray-900 bg-clip-text text-transparent drop-shadow-lg">
+    O
+  </span>
+</div>
 
-          {/* ON LINE */}
-          <h1 className="text-6xl md:text-7xl font-bold tracking-tight mb-8">
-            ON <span className="block md:inline">LINE</span>
-          </h1>
+          {/* ON LINE - duas linhas, alinhadas verticalmente */}
+<div className="text-left">
+  <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-0 leading-tight">
+    On
+  </h1>
+  <h1 className="text-3xl md:text-4xl font-bold tracking-tight mb-8 leading-tight">
+    Line
+  </h1>
+</div>
 
           {/* Descrição */}
           <p className="text-gray-200 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
@@ -254,7 +274,7 @@ export default function Home() {
   </div>
 </section>
 
-      {/* Portfolio - Trabalhos */}
+     {/* Portfolio - Trabalhos */}
 <section id="portfolio" className="py-20 px-6 bg-white scroll-mt-20">
   <div className="container mx-auto max-w-6xl">
     <div className="text-center mb-12">
@@ -262,24 +282,178 @@ export default function Home() {
       <h2 className="text-4xl md:text-5xl font-bold mt-2">Trabalhos</h2>
     </div>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {portfolioItems.map((item, idx) => (
-        <div key={idx} className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]">
-          <div className="relative h-64 w-full">
-            <Image
-              src={item.img}
-              alt={item.title}
-              fill
-              className="object-cover group-hover:scale-105 transition duration-500"
-            />
-            <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
-          </div>
-          <div className="p-5">
-            <span className="text-gray-500 text-xs font-mono">{item.num}</span>
-            <h3 className="text-white font-bold text-lg mt-1">{item.title}</h3>
-            <p className="text-gray-400 text-sm mt-1">{item.subtitle}</p>
-          </div>
+      
+      {/* Card 1: PREPARADO */}
+      <a 
+        href="https://preparado.vercel.app/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
+      >
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/preparado.svg"
+            alt="PREPARADO"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
         </div>
-      ))}
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">01</span>
+          <h3 className="text-white font-bold text-lg mt-1">PREPARADO</h3>
+          <p className="text-gray-400 text-sm mt-1">Sua preparação para emergências</p>
+        </div>
+      </a>
+
+      {/* Card 2: Banca UFO */}
+      <a 
+        href="https://banca-ufo-app.vercel.app/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]"
+      >
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/banca-ufo.svg"
+            alt="Banca UFO"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+        </div>
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">02</span>
+          <h3 className="text-white font-bold text-lg mt-1">Banca UFO</h3>
+          <p className="text-gray-400 text-sm mt-1">Revista Brasileira de Ufologia</p>
+        </div>
+      </a>
+
+      {/* Card 3: Anel de Pirita (exemplo com imagem existente) */}
+      <div className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]">
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/p-1.png"
+            alt="Anel de Pirita"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+        </div>
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">03</span>
+          <h3 className="text-white font-bold text-lg mt-1">Anel de Pirita</h3>
+          <p className="text-gray-400 text-sm mt-1">Cristais Alto Paraíso</p>
+        </div>
+      </div>
+
+      {/* Card 4: Anel de Ametista */}
+      <div className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]">
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/p-2.png"
+            alt="Anel de Ametista"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+        </div>
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">04</span>
+          <h3 className="text-white font-bold text-lg mt-1">Anel de Ametista</h3>
+          <p className="text-gray-400 text-sm mt-1">Cristais Alto Paraíso</p>
+        </div>
+      </div>
+
+      {/* Card 5: Anel de Citrino */}
+      <div className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]">
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/p-3.png"
+            alt="Anel de Citrino"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+        </div>
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">05</span>
+          <h3 className="text-white font-bold text-lg mt-1">Anel de Citrino</h3>
+          <p className="text-gray-400 text-sm mt-1">Cristais Alto Paraíso</p>
+        </div>
+      </div>
+
+      {/* Card 6: Anel de Malaquita */}
+      <div className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]">
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/p-4.png"
+            alt="Anel de Malaquita"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+        </div>
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">06</span>
+          <h3 className="text-white font-bold text-lg mt-1">Anel de Malaquita</h3>
+          <p className="text-gray-400 text-sm mt-1">Cristais Alto Paraíso</p>
+        </div>
+      </div>
+
+      {/* Card 7: Criança - FOTOGRAFIA */}
+      <div className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]">
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/p-5.png"
+            alt="Criança"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+        </div>
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">07</span>
+          <h3 className="text-white font-bold text-lg mt-1">Criança</h3>
+          <p className="text-gray-400 text-sm mt-1">FOTOGRAFIA</p>
+        </div>
+      </div>
+
+      {/* Card 8: MODA PRAIA */}
+      <div className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]">
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/p-6.png"
+            alt="MODA PRAIA"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+        </div>
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">08</span>
+          <h3 className="text-white font-bold text-lg mt-1">MODA PRAIA</h3>
+          <p className="text-gray-400 text-sm mt-1">Catalogo Moda</p>
+        </div>
+      </div>
+
+      {/* Card 9: Capa Revista Atrevida */}
+      <div className="group bg-black rounded-xl overflow-hidden cursor-pointer transition-transform hover:scale-[1.02]">
+        <div className="relative h-64 w-full">
+          <Image
+            src="/portfolio/p-7.png"
+            alt="Capa Revista Atrevida"
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition" />
+        </div>
+        <div className="p-5">
+          <span className="text-gray-500 text-xs font-mono">09</span>
+          <h3 className="text-white font-bold text-lg mt-1">Capa</h3>
+          <p className="text-gray-400 text-sm mt-1">Revista Atrevida</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
